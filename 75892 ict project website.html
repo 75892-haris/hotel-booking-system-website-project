@@ -1,0 +1,306 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Bin Shahid Hotel Booking</title>
+
+<!---- CSS STYLING---------------
+     ====================== -->
+<style>
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Body styling */
+body {
+    background-color: #f4f6f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header section */
+header {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: white;
+    padding: 20px 40px;
+    text-align: center;
+}
+
+/* Navigation bar */
+nav {
+    margin-top: 10px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Section common styling */
+section {
+    padding: 50px 40px;
+}
+
+/* Section titles */
+section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1e3c72;
+}
+
+/* Booking form container */
+.booking-form {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Form layout */
+.booking-form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+}
+.booking-form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+/* Book now button */
+.book-btn {
+    margin-top: 25px;
+    width: 100%;
+    padding: 12px;
+    background-color: #1e3c72;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.book-btn:hover {
+    background-color: #16325c;
+}
+
+/* Room cards container */
+.rooms {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+/* Individual room card */
+.room-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+.room-card:hover {
+    transform: translateY(-8px);
+}
+
+/* Room images */
+.room-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Room content */
+.room-info {
+    padding: 15px;
+}
+.room-info h3 {
+    color: #1e3c72;
+}
+
+/* Payment section */
+.payments {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.payment-box {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-weight: bold;
+}
+
+/* Contact form */
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+.contact-form label {
+    display: block;
+    margin-top: 15px;
+}
+.contact-form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+/* Footer */
+footer {
+    background: #1e3c72;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ======================
+     HEADER SECTION
+     ====================== -->
+<header>
+    <h1>BIN SHAHID Hotel</h1>
+    <p>Comfort • Elegance • Experience</p>
+    <nav>
+        <a href="#booking">Booking</a>
+        <a href="#rooms">Rooms</a>
+        <a href="#payment">Payment</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- ======================
+     BOOKING SECTION
+     ====================== -->
+<section id="booking">
+    <h2>Book Your Stay</h2>
+
+    <div class="booking-form">
+        <!-- Check-in date -->
+        <label>Check-in Date</label>
+        <input type="date" id="checkin">
+
+        <!-- Check-out date -->
+        <label>Check-out Date</label>
+        <input type="date" id="checkout">
+
+        <!-- Button scrolls to payment section -->
+        <button class="book-btn" onclick="scrollToPayment()">
+            Book Now
+        </button>
+    </div>
+</section>
+
+<!-- ======================
+     ROOMS SECTION
+     ====================== -->
+<section id="rooms">
+    <h2>Available Rooms</h2>
+
+    <div class="rooms">
+        <!-- Room 1 -->
+        <div class="room-card">
+            <img src="ICT PROJECT PHOTO 1.jpg" alt="ICT PROJECT PHOTO 1">
+            <div class="room-info">
+                <h3>Deluxe Room</h3>
+                <p>Spacious room with king-size bed, free Wi-Fi, and city view.</p>
+            </div>
+        </div>
+
+        <!-- Room 2 -->
+        <div class="room-card">
+            <img src="ict project photo 2.jpg" alt="Executive Room">
+            <div class="room-info">
+                <h3>Executive Room</h3>
+                <p>Luxury room with work desk, minibar, and premium facilities.</p>
+            </div>
+        </div>
+
+        <!-- Room 3 -->
+        <div class="room-card">
+            <img src="ict project photo 3.jpg" alt="Suite">
+            <div class="room-info">
+                <h3>Presidential Suite</h3>
+                <p>Ultimate comfort with living area, balcony, and panoramic view.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ======================
+     PAYMENT SECTION
+     ====================== -->
+<section id="payment">
+    <h2>Payment Methods</h2>
+
+    <div class="payments">
+        <div class="payment-box">💳 Credit Card</div>
+        <div class="payment-box">🏦 Bank Transfer</div>
+        <div class="payment-box">📱 Mobile Wallet</div>
+        <div class="payment-box">💵 Cash on Arrival</div>
+        <div class="payment-box">💲 Easypaisa</div>
+    </div>
+</section>
+
+<!-- ======================
+     CONTACT SECTION
+     ====================== -->
+<section id="contact">
+    <h2>Contact Us</h2>
+
+    <div class="contact-form">
+        <label>Email</label>
+        <input type="email" placeholder="example@email.com">
+
+        <label>Phone Number</label>
+        <input type="tel" placeholder="+92 300 1234567">
+
+        <label>Your Message</label>
+        <input type="text" placeholder="please give your feedback">
+
+        <!-- Submit Button -->
+        <button class="book-btn">Submit</button>
+    </div>
+</section>
+
+
+<!-- ======================
+     FOOTER
+     ====================== -->
+<footer>
+    <p>© 2025 Bin Shahid  Hotel. All Rights Reserved.</p>
+</footer>
+
+<!-- ======================
+         JAVASCRIPT
+     ====================== -->
+<script>
+/*  function smoothly scrolls the page to the payment section */
+function scrollToPayment() {
+    document.getElementById("payment").scrollIntoView({
+        behavior: "smooth"
+    });
+}
+</script>
+
+</body>
+</html>
